@@ -2,6 +2,6 @@
 
 July 2022 update: 
 
-- The sample program is added for reference in advance.
+- The sample program using TSFool to generate adversarial time series for an LSTM classifier in PowerCons Dataset from UCR Archive is added for reference in advance.
 
-- The work is in progress at present and the detailed introduction and description (as well as a possible technology paper) will be open to the public soon.
+- The work is in progress at present and the detailed description (as well as a possible technology paper) will be opened to the public soon.

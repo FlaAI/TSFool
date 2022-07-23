@@ -1,4 +1,4 @@
-# TSFool: Adversarial Time Series Generation Tool based on Interval Weighted Finite Automaton to Fool Recurrent Neural Network Classifiers
+# TSFool: Adversarial Time Series Generation Tool based on Intervalized Weighted Finite Automaton to Fool Recurrent Neural Network Classifiers
 
 July 2022 update: 
 

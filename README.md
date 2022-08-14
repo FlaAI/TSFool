@@ -1,9 +1,12 @@
 # TSFool: Crafting High-quality Adversarial Time Series to Fool Recurrent Neural Network Classifiers
 
-July 2022 update: 
+## Update
 
+#### August 2022
+
+
+#### July 2022
 - The sample program using TSFool to craft adversarial time series for an LSTM classifier in PowerCons Dataset from UCR Archive is added for reference in advance.
-
 - The work is in progress at present and the detailed description (as well as a possible technology paper) will be opened to the public soon.
 
 

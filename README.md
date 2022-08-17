@@ -4,7 +4,7 @@
 
 #### August 2022:
 - The raw experiment records about **1) the datasets selected from the UCR archive, 2) the target LSTM classifiers, 3) the intervalized weighted finite automatons established in the process, and 4) the results of the final adversarial attacks** have been opened.
-- The experiment code, the pre-trained models and the crafted adversarial sets are uploaded in the floders namely ``Programs'', ``Models'' and ``UCR-Adv'' for reproducibility as well as to allow verification and possible improvement.
+- The **experiment code**, the **pre-trained models** and the **crafted adversarial sets** are uploaded in the floders namely ``Programs``, ``Models`` and ``UCR-Adv`` for reproducibility as well as to allow verification and possible improvement.
 
 #### July 2022:
 - The sample program using TSFool to craft adversarial time series for an LSTM classifier in PowerCons Dataset from UCR Archive is added for reference in advance.

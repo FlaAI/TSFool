@@ -20,7 +20,7 @@ So if there is a kind of representation model that can simulate the way the DNN 
 In this project, the Interval Weighted Finite Automaton and Recurrent Neural Network (actually LSTM) are respectively the representation model and the DNN mentioned above. Further transferring this idea to other types of models and data is thought to be feasible tentatively, and such attempts are in progress at present.
 
 
-## The Experimental Datasets Selected from UCR Archive
+## The Experimental Datasets from UCR Archive
 
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 

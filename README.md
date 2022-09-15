@@ -2,8 +2,8 @@
 
 ## Update
 
-#### September 2022:X
-- An arXiv preprint is now available [here](https://arxiv.org/abs/2209.06388).
+#### September 2022:
+- An **arXiv preprint** is now available [here](https://arxiv.org/abs/2209.06388).
 
 #### August 2022:
 - The raw experiment records about **1) the datasets selected from the UCR archive**, **2) the target LSTM classifiers**, **3) the intervalized weighted finite automatons established in the process**, and **4) the results of the final adversarial attacks** have been opened.

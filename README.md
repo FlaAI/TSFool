@@ -2,6 +2,10 @@
 
 ## Update
 
+#### February 2023:
+- A new version of TSFool implemented as a Python module is available now.
+- The corresponding information would be updated soon (expected to complete before Feb. 9, AOE time).
+
 #### September 2022:
 - The raw experiment records about **1) the datasets selected from the UCR archive**, **2) the target LSTM classifiers**, **3) the intervalized weighted finite automatons established in the process**, and **4) the results of the final adversarial attacks** have been opened.
 - The **experiment code**, the **pre-trained models** and the **crafted adversarial sets** are respectively uploaded in the ``Programs``, ``Models`` and ``UCR-Adv`` for reproducibility as well as to allow verification and possible improvement.

@@ -1,4 +1,4 @@
-# TSFool: Crafting High-quality Adversarial Time Series to Fool Recurrent Neural Network Classifiers
+# TSFool: Crafting Highly-imperceptible Adversarial Time Series through Multi-objective Black-box Attack to Fool RNN Classifiers
 
 ## Update
 

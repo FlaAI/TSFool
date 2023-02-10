@@ -40,10 +40,10 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 
 We select the 10 experimental datasets following the UCR briefing document strictly to make sure there is no cherry-picking. To be specific, the claims for the certain type of selected data are:
-- 30 \leq Train Size \leq 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively; and
-- Test Size \leq 4000, 
+- 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively; and
+- Test Size $\leq$ 4000, 
 
-class numbers \leq 5 and time step length \leq 150, since these can effect the efficiency of all kinds of attack methods used
+class numbers $\leq$ 5 and time step length $\leq$ 150, since these can effect the efficiency of all kinds of attack methods used
 
 Note that 
 

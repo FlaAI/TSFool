@@ -57,9 +57,9 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 
 ### The Results of adversarial attack using TSFool and five common methods on the Experimental Datasets
 
-#### Exp. 1
-##### - Dataset: CBF
-##### - Original Model Acc (Test Set): 0.7511
+### Exp. 1
+#### - Dataset: CBF
+#### - Original Model Acc (Test Set): 0.7511
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.3311       | 900          | **0.004389**  | 14.12%       | 1.1481     |
@@ -69,9 +69,9 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 | Transfer Attack | 0.7422       | 900          | -             | **2.60%**    | 1.0105     |
 | TSFool          | **0.2111**   | 720          | 0.042502      | 7.48%        | **0.7425** |
 
-#### Exp. 2
-##### - Dataset: DPOAG
-##### - Original Model Acc (Test Set): 0.7842
+### Exp. 2
+#### - Dataset: DPOAG
+#### - Original Model Acc (Test Set): 0.7842
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.4245       | 139          | **0.00319**   | 64.20%       | 1.1593     |
@@ -81,6 +81,29 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 | Transfer Attack | 0.8575       | 400          | -             | 9.62%        | 1.8219     |
 | TSFool          | **0.1071**   | 140          | 0.036396      | **4.93%**    | 1.6093     |
 
+### Exp. 3
+#### - Dataset: DPOC
+#### - Original Model Acc (Test Set): 0.7319
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
+|-----------------|--------------|--------------|---------------|--------------|------------|
+| FGSM            | 0.5833       | 276          | **0.002116**  | 42.21%       | **0.7966** |
+| BIM             | 0.6413       | 276          | 0.022393      | 8.84%        | 0.9383     |
+| DeepFool        | 0.442        | 276          | 1.974539      | 38.69%       | 0.9372     |
+| PGD             | 0.5833       | 276          | 0.02313       | 42.54%       | 0.7967     |
+| Transfer Attack | 0.6767       | 600          | -             | 5.24%        | 1.0938     |
+| TSFool          | **0.0652**   | 660          | 0.011313      | **2.93%**    | 0.8381     |
+
+### Exp. 4
+#### - Dataset: ECG200
+#### - Original Model Acc (Test Set): 0.7400
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
+|-----------------|--------------|--------------|---------------|--------------|------------|
+| FGSM            | 0.58         | 100          | **0.003786**  | 21.07%       | 1.293      |
+| BIM             | 0.65         | 100          | 0.035593      | **4.10%**    | 0.9787     |
+| DeepFool        | **0.02**     | 100          | 0.24211       | 17.35%       | 1.2834     |
+| PGD             | 0.52         | 100          | 0.037794      | 21.51%       | 1.3359     |
+| Transfer Attack | 0.73         | 100          | -             | 4.26%        | 1.0422     |
+| TSFool          | 0.0571       | 140          | 0.019018      | 4.41%        | **0.6291** |
 
 
 

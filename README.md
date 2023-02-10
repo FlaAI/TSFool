@@ -12,21 +12,17 @@ adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P
 - The detailed experiment records are available in the following content.
 
 
-## Update
-
+<!-- ## Update
 #### February 2023:
 - A new version of TSFool implemented as a Python module is available now.
 - The corresponding information would be updated soon (expected to complete before Feb. 9, AOE time).
-
-
 #### September 2022:
 - ~~The raw experiment records about **1) the datasets selected from the UCR archive**, **2) the target LSTM classifiers**, **3) the intervalized weighted finite automatons established in the process**, and **4) the results of the final adversarial attacks** have been opened.~~
 - ~~The **experiment code**, the **pre-trained models** and the **crafted adversarial sets** are respectively uploaded in the ``Programs``, ``Models`` and ``UCR-Adv`` for reproducibility as well as to allow verification and possible improvement.~~
-
 #### July 2022:
 - ~~The sample program using TSFool to craft adversarial time series for an LSTM classifier in PowerCons Dataset from UCR Archive is added for reference in advance.~~
 - ~~The work is in progress at present and the detailed description (as well as a possible technology paper) will be opened to the public soon.~~
-
+ -->
 
 ## Core Idea
 

@@ -39,13 +39,13 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 
-We select the 10 experimental datasets following the UCR briefing document strictly to make sure there is no cherry-picking. To be specific, the claims for the certain type of selected data are:
+We select the 10 experimental datasets following the *UCR briefing document* strictly to make sure there is no cherry-picking. To be specific, the claims for the certain type of selected data are:
 - 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively;
-- Test Size $\leq$ 4000, 
+- Test Size $\leq$ 4000, since all the attack methods base on the test set to craft adversarial samples and we expect efficienct comparisons between them; and
+- class numbers $\leq$ 5 and time step length $\leq$ 150, since they represent the scale of the original problem 
 
-class numbers $\leq$ 5 and time step length $\leq$ 150, since these can effect the efficiency of all kinds of attack methods used
+Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the ``best practice'' suggested by the *UCR briefing document*, we will gradually testing and publishing the results of TSFool attack on all the rest UCR datasets.
 
-Note that 
 
 | ID     | Type      | Name                           | Train | Test | Class | Length |
 |--------|-----------|--------------------------------|-------|------|-------|--------|
@@ -80,7 +80,7 @@ Note that
 #### - Original Model Acc (Test Set): 0.7842
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
-| FGSM            | 0.4245       | 139          | **0.00319**   | 64.20%       | 1.1593     |
+| FGSM            | 0.4245       | 139          | **0.003190**  | 64.20%       | 1.1593     |
 | BIM             | 0.7554       | 139          | 0.028328      | 13.59%       | 1.1577     |
 | DeepFool        | 0.1727       | 139          | 0.961403      | 50.61%       | **1.1297** |
 | PGD             | 0.3525       | 139          | 0.029060      | 64.68%       | 1.1660     |
@@ -164,7 +164,7 @@ Note that
 #### - Original Model Acc (Test Set): 0.8976
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
-| FGSM            | 0.4878       | 205          | **0.00264**   | 134.01%      | **0.7961** |
+| FGSM            | 0.4878       | 205          | **0.002640**  | 134.01%      | **0.7961** |
 | BIM             | 0.8878       | 205          | 0.055791      | 30.79%       | 1.5299     |
 | DeepFool        | 0.1902       | 205          | 2.265096      | 121.79%      | 1.1564     |
 | PGD             | 0.4878       | 205          | 0.027445      | 134.95%      | 0.7991     |

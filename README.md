@@ -57,7 +57,9 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 
 ### The Results of adversarial attack using TSFool and five common methods on the Experimental Datasets
 
-#### Dataset: CBF, Original Model (Test) Acc: 0.7511
+#### Exp. 1
+##### - Dataset: CBF
+##### - Original Model (Test) Acc: 0.7511
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC     |
 |-----------------|--------------|--------------|---------------|--------------|--------|
 | FGSM            | 0.3311       | 900          | 0.004389      | 14.12%       | 1.1481 |

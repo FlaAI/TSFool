@@ -2,6 +2,9 @@
 
 ## Quick Start
 
+The Python module of TSFool, the pre-trained RNN classifiers
+and the crafted adversarial sets are available
+
 <!-- ```python-->
 <!-- adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)-->
 <!-- ```-->
@@ -32,9 +35,24 @@ So if there is a kind of representation model that can simulate the way the DNN 
 In this project, the Interval Weighted Finite Automaton and Recurrent Neural Network (actually LSTM) are respectively the representation model and the DNN mentioned above. Further transferring this idea to other types of models and data is thought to be feasible tentatively, and such attempts are also in progress at present.
 
 
-## The Experimental Datasets from UCR Archive
+## Detailed Experiment Records
+
+### The 10 Experimental Datasets from UCR Archive
 
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
+
+| ID     | Type      | Name                           | Train | Test | Class | Length |
+|--------|-----------|--------------------------------|-------|------|-------|--------|
+| CBF    | Simulated | CBF                            | 30    | 900  | 3     | 128    |
+| DPOAG  | Image     | DistalPhalanxOutlineAgeGroup   | 400   | 139  | 3     | 80     |
+| DPOC   | Image     | DistalPhalanxOutlineCorrect    | 600   | 276  | 2     | 80     |
+| ECG200 | ECG       | ECG200                         | 100   | 100  | 2     | 96     |
+| GP     | Motion    | GunPoint                       | 50    | 150  | 2     | 150    |
+| IPD    | Sensor    | ItalyPowerDemand               | 67    | 1029 | 2     | 24     |
+| MPOAG  | Image     | MiddlePhalanxOutlineAgeGroup   | 400   | 154  | 3     | 80     |
+| MPOC   | Image     | MiddlePhalanxOutlineCorrect    | 600   | 291  | 2     | 80     |
+| PPOAG  | Image     | ProximalPhalanxOutlineAgeGroup | 400   | 205  | 3     | 80     |
+| PPOC   | Image     | ProximalPhalanxOutlineCorrect  | 600   | 291  | 2     | 80     |
 
 
 <!-- ## The Experimental LSTM Classifiers -->

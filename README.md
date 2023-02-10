@@ -35,9 +35,9 @@ So if there is a kind of representation model that can simulate the way the DNN 
 In this project, the Interval Weighted Finite Automaton and Recurrent Neural Network (actually LSTM) are respectively the representation model and the DNN mentioned above. Further transferring this idea to other types of models and data is thought to be feasible tentatively, and such attempts are also in progress at present.
 
 
-## Detailed Experiment Records
+# Detailed Experiment Records
 
-### The 10 Experimental Datasets from UCR Archive
+## The 10 Experimental Datasets from UCR Archive
 
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 
@@ -55,7 +55,7 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 | PPOC   | Image     | ProximalPhalanxOutlineCorrect  | 600   | 291  | 2     | 80     |
 
 
-### The Results of adversarial attack using TSFool and five common methods on the Experimental Datasets
+## The Results of adversarial attack using TSFool and five common methods on the Experimental Datasets
 
 ### Exp. 1
 #### - Dataset: CBF
@@ -104,6 +104,44 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 | PGD             | 0.52         | 100          | 0.037794      | 21.51%       | 1.3359     |
 | Transfer Attack | 0.73         | 100          | -             | 4.26%        | 1.0422     |
 | TSFool          | 0.0571       | 140          | 0.019018      | 4.41%        | **0.6291** |
+
+### Exp. 5
+#### - Dataset: GP
+#### - Original Model Acc (Test Set): 0.9333
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
+|-----------------|--------------|--------------|---------------|--------------|------------|
+| FGSM            | 0.4933       | 150          | **0.005317**  | 37.25%       | 1.8911     |
+| BIM             | 0.9133       | 150          | 0.055787      | 8.61%        | 0.8701     |
+| DeepFool        | 0.4467       | 150          | 4.224587      | 39.10%       | 1.7623     |
+| PGD             | 0.4933       | 150          | 0.058562      | 37.50%       | 1.8903     |
+| Transfer Attack | 0.9133       | 150          | -             | 5.06%        | 0.7851     |
+| TSFool          | **0.0000**   | 80           | 0.19372       | **3.11%**    | **0.6815** |
+
+### Exp. 6
+#### - Dataset: IPD
+#### - Original Model Acc (Test Set): 0.9650
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
+|-----------------|--------------|--------------|---------------|--------------|------------|
+| FGSM            | 0.8571       | 1029         | **0.000281**  | 24.20%       | 0.933      |
+| BIM             | 0.9368       | 1029         | 0.055788      | 3.90%        | 1.2255     |
+| DeepFool        | **0.1535**   | 1029         | 0.09449       | 30.56%       | 1.114      |
+| PGD             | 0.8192       | 1029         | 0.002599      | 24.59%       | 0.8952     |
+| Transfer Attack | 0.932        | 1029         | -             | 4.98%        | 1.078      |
+| TSFool          | 0.1588       | 340          | 0.008746      | **2.98%**    | **0.8021** |
+
+### Exp. 7
+#### - Dataset: MPOAG
+#### - Original Model Acc (Test Set): 0.6429
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
+|-----------------|--------------|--------------|---------------|--------------|------------|
+| FGSM            | 0.1883       | 154          | **0.006101**  | 123.79%      | 1.2606     |
+| BIM             | 0.5519       | 154          | 0.055789      | 26.86%       | 1.0486     |
+| DeepFool        | **0.013**    | 154          | 0.261087      | 80.59%       | 1.2047     |
+| PGD             | 0.1883       | 154          | 0.061951      | 124.59%      | 1.2593     |
+| Transfer Attack | 0.7925       | 400          | -             | 9.46%        | 1.4861     |
+| TSFool          | 0.0333       | 60           | 0.09576       | **5.72%**    | **0.6831** |
+
+
 
 
 

@@ -13,11 +13,14 @@ adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P
 
 ![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
 
-<center class="half">
-    <img src="figures/FGSM.png" width="200"/><img src="figures/BIM.png" width="200"/><img src="figures/DeepFool" width="200"/>
-</center>
+<img decoding="async" src="figures/FGSM.png" width="30%"><img decoding="async" src="figures/BIM.png" width="30%"><img decoding="async" src="figures/DeepFool.png" width="30%">
 
-<!-- ![Instance-PGD](figures/PGD.png)![Instance-TransferAttack](figures/TransferAttack.png)![Instance-TSFool](figures/TSFool.png) -->
+<!-- 
+<center class="half">
+    <img src="figures/FGSM.png" width="200"/><img src="figures/BIM.png" width="200"/><img src="figures/DeepFool.png" width="200"/>
+</center>
+![Instance-PGD](figures/PGD.png)![Instance-TransferAttack](figures/TransferAttack.png)![Instance-TSFool](figures/TSFool.png)
+-->
 
 
 <!-- ## Update

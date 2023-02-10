@@ -14,7 +14,7 @@ adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P
 ### Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks
 ![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
 
-### The Instances of TSFool and Five Common Adversarial Attacks in UCR-ECG200 Dataset.
+### An Instance of TSFool and Five Common Adversarial Attacks on UCR-ECG200 Dataset
 <img decoding="async" src="figures/FGSM.png" width="33.3%"><img decoding="async" src="figures/BIM.png" width="33.3%"><img decoding="async" src="figures/DeepFool.png" width="33.3%">
 <img decoding="async" src="figures/PGD.png" width="33.3%"><img decoding="async" src="figures/TransferAttack.png" width="33.3%"><img decoding="async" src="figures/TSFool.png" width="33.3%">
 

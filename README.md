@@ -14,7 +14,7 @@ adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P
 ### Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks
 ![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
 
-### An Instances of TSFool and Five Common Adversarial Attacks in UCR-ECG200 Dataset.
+### The Instances of TSFool and Five Common Adversarial Attacks in UCR-ECG200 Dataset.
 <img decoding="async" src="figures/FGSM.png" width="33.3%"><img decoding="async" src="figures/BIM.png" width="33.3%"><img decoding="async" src="figures/DeepFool.png" width="33.3%">
 <img decoding="async" src="figures/PGD.png" width="33.3%"><img decoding="async" src="figures/TransferAttack.png" width="33.3%"><img decoding="async" src="figures/TSFool.png" width="33.3%">
 
@@ -46,12 +46,12 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 
-We select the 10 experimental datasets following the *UCR briefing document* strictly to make sure there is no cherry-picking. To be specific, the claims for the certain type of selected data are:
-- 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively;
-- Test Size $\leq$ 4000, since all the attack methods base on the test set to craft adversarial samples and we expect efficienct comparisons between them; and
+We select the 10 experimental datasets following the *UCR briefing document* strictly to make sure there is no cherry-picking. To be specific, the claims for the data are:
+- 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too-small training set may make the model learning unnecessarily challenging, and a too-big training set is more likely to be time-consuming respectively;
+- Test Size $\leq$ 4000, since all the attack methods are based on the test set to craft adversarial samples and we expect to compare them efficiently; and
 - class numbers $\leq$ 5 and time step length $\leq$ 150, since they represent the scale of the original problem which we also would like to reduce due to the same reason as above.
 
-Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, we will gradually testing and publishing the results of TSFool attack on all the rest UCR datasets in the future.
+Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, we will gradually test and publish the results of TSFool attack on all the rest UCR datasets in the future.
 
 | ID     | Type      | Name                           | Train | Test | Class | Length |
 |--------|-----------|--------------------------------|-------|------|-------|--------|
@@ -67,7 +67,7 @@ Note that all the claims are proposed just for a compromise between general sign
 | PPOC   | Image     | ProximalPhalanxOutlineCorrect  | 600   | 291  | 2     | 80     |
 
 
-## The Comparsion of TSFool and five common adversarial attacks on the Experimental Datasets
+## The Comparsion of TSFool and Five Common Adversarial Attacks on the Experimental Datasets
 
 ### Exp. 1
 #### - Dataset: CBF

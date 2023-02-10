@@ -40,7 +40,7 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 **The UCR Time Series Classification Archive:** https://www.cs.ucr.edu/~eamonn/time_series_data_2018/
 
 We select the 10 experimental datasets following the UCR briefing document strictly to make sure there is no cherry-picking. To be specific, the claims for the certain type of selected data are:
-- 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively; and
+- 30 $\leq$ Train Size $\leq$ 1000, since the pre-training of RNN classifiers is not a main part of our approach and is not expected to spend too much time, while a too small training set may make the model learning unnecessarily challenging, and a too big training set is more likely to be time-cosuming respectively;
 - Test Size $\leq$ 4000, 
 
 class numbers $\leq$ 5 and time step length $\leq$ 150, since these can effect the efficiency of all kinds of attack methods used
@@ -83,7 +83,7 @@ Note that
 | FGSM            | 0.4245       | 139          | **0.00319**   | 64.20%       | 1.1593     |
 | BIM             | 0.7554       | 139          | 0.028328      | 13.59%       | 1.1577     |
 | DeepFool        | 0.1727       | 139          | 0.961403      | 50.61%       | **1.1297** |
-| PGD             | 0.3525       | 139          | 0.02906       | 64.68%       | 1.166      |
+| PGD             | 0.3525       | 139          | 0.029060      | 64.68%       | 1.1660     |
 | Transfer Attack | 0.8575       | 400          | -             | 9.62%        | 1.8219     |
 | TSFool          | **0.1071**   | 140          | 0.036396      | **4.93%**    | 1.6093     |
 
@@ -94,8 +94,8 @@ Note that
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.5833       | 276          | **0.002116**  | 42.21%       | **0.7966** |
 | BIM             | 0.6413       | 276          | 0.022393      | 8.84%        | 0.9383     |
-| DeepFool        | 0.442        | 276          | 1.974539      | 38.69%       | 0.9372     |
-| PGD             | 0.5833       | 276          | 0.02313       | 42.54%       | 0.7967     |
+| DeepFool        | 0.4420       | 276          | 1.974539      | 38.69%       | 0.9372     |
+| PGD             | 0.5833       | 276          | 0.023130      | 42.54%       | 0.7967     |
 | Transfer Attack | 0.6767       | 600          | -             | 5.24%        | 1.0938     |
 | TSFool          | **0.0652**   | 660          | 0.011313      | **2.93%**    | 0.8381     |
 
@@ -104,11 +104,11 @@ Note that
 #### - Original Model Acc (Test Set): 0.7400
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
-| FGSM            | 0.58         | 100          | **0.003786**  | 21.07%       | 1.293      |
-| BIM             | 0.65         | 100          | 0.035593      | **4.10%**    | 0.9787     |
-| DeepFool        | **0.02**     | 100          | 0.24211       | 17.35%       | 1.2834     |
-| PGD             | 0.52         | 100          | 0.037794      | 21.51%       | 1.3359     |
-| Transfer Attack | 0.73         | 100          | -             | 4.26%        | 1.0422     |
+| FGSM            | 0.5800       | 100          | **0.003786**  | 21.07%       | 1.2930     |
+| BIM             | 0.6500       | 100          | 0.035593      | **4.10%**    | 0.9787     |
+| DeepFool        | **0.0200**   | 100          | 0.242110      | 17.35%       | 1.2834     |
+| PGD             | 0.5200       | 100          | 0.037794      | 21.51%       | 1.3359     |
+| Transfer Attack | 0.7300       | 100          | -             | 4.26%        | 1.0422     |
 | TSFool          | 0.0571       | 140          | 0.019018      | 4.41%        | **0.6291** |
 
 ### Exp. 5
@@ -121,18 +121,18 @@ Note that
 | DeepFool        | 0.4467       | 150          | 4.224587      | 39.10%       | 1.7623     |
 | PGD             | 0.4933       | 150          | 0.058562      | 37.50%       | 1.8903     |
 | Transfer Attack | 0.9133       | 150          | -             | 5.06%        | 0.7851     |
-| TSFool          | **0.0000**   | 80           | 0.19372       | **3.11%**    | **0.6815** |
+| TSFool          | **0.0000**   | 80           | 0.193720      | **3.11%**    | **0.6815** |
 
 ### Exp. 6
 #### - Dataset: IPD
 #### - Original Model Acc (Test Set): 0.9650
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
-| FGSM            | 0.8571       | 1029         | **0.000281**  | 24.20%       | 0.933      |
+| FGSM            | 0.8571       | 1029         | **0.000281**  | 24.20%       | 0.9330     |
 | BIM             | 0.9368       | 1029         | 0.055788      | 3.90%        | 1.2255     |
-| DeepFool        | **0.1535**   | 1029         | 0.09449       | 30.56%       | 1.114      |
+| DeepFool        | **0.1535**   | 1029         | 0.094490      | 30.56%       | 1.1140     |
 | PGD             | 0.8192       | 1029         | 0.002599      | 24.59%       | 0.8952     |
-| Transfer Attack | 0.932        | 1029         | -             | 4.98%        | 1.078      |
+| Transfer Attack | 0.9320       | 1029         | -             | 4.98%        | 1.0780     |
 | TSFool          | 0.1588       | 340          | 0.008746      | **2.98%**    | **0.8021** |
 
 ### Exp. 7
@@ -142,10 +142,10 @@ Note that
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.1883       | 154          | **0.006101**  | 123.79%      | 1.2606     |
 | BIM             | 0.5519       | 154          | 0.055789      | 26.86%       | 1.0486     |
-| DeepFool        | **0.013**    | 154          | 0.261087      | 80.59%       | 1.2047     |
+| DeepFool        | **0.0130**   | 154          | 0.261087      | 80.59%       | 1.2047     |
 | PGD             | 0.1883       | 154          | 0.061951      | 124.59%      | 1.2593     |
 | Transfer Attack | 0.7925       | 400          | -             | 9.46%        | 1.4861     |
-| TSFool          | 0.0333       | 60           | 0.09576       | **5.72%**    | **0.6831** |
+| TSFool          | 0.0333       | 60           | 0.095760      | **5.72%**    | **0.6831** |
 
 ### Exp. 8
 #### - Dataset: MPOC
@@ -153,7 +153,7 @@ Note that
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.5704       | 291          | **0.002051**  | 100.93%      | 1.0111     |
-| BIM             | 0.6392       | 291          | 0.05579       | 21.82%       | 0.9903     |
+| BIM             | 0.6392       | 291          | 0.055790      | 21.82%       | 0.9903     |
 | DeepFool        | 0.5361       | 291          | 2.326599      | 106.93%      | 0.9718     |
 | PGD             | 0.5704       | 291          | 0.022377      | 101.61%      | 1.0123     |
 | Transfer Attack | 0.4833       | 600          | -             | 9.35%        | 1.0294     |
@@ -169,7 +169,7 @@ Note that
 | DeepFool        | 0.1902       | 205          | 2.265096      | 121.79%      | 1.1564     |
 | PGD             | 0.4878       | 205          | 0.027445      | 134.95%      | 0.7991     |
 | Transfer Attack | 0.8829       | 205          | -             | 16.46%       | 1.6559     |
-| TSFool          | **0.0643**   | 140          | 0.054581      | **15.74%**   | 0.899      |
+| TSFool          | **0.0643**   | 140          | 0.054581      | **15.74%**   | 0.8990     |
 
 ### Exp. 10
 #### - Dataset: PPOC
@@ -177,10 +177,10 @@ Note that
 | Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC         |
 |-----------------|--------------|--------------|---------------|--------------|------------|
 | FGSM            | 0.6838       | 291          | **0.002175**  | 119.19%      | 1.7029     |
-| BIM             | 0.732        | 291          | 0.055792      | 26.98%       | 1.0942     |
+| BIM             | 0.7320       | 291          | 0.055792      | 26.98%       | 1.0942     |
 | DeepFool        | 0.3746       | 291          | 2.314018      | 96.88%       | **1.0729** |
 | PGD             | 0.6838       | 291          | 0.024215      | 120.02%      | 1.7022     |
-| Transfer Attack | 0.8419       | 291          | -             | 13.48%       | 1.212      |
+| Transfer Attack | 0.8419       | 291          | -             | 13.48%       | 1.2120     |
 | TSFool          | **0.1537**   | 540          | 0.015317      | **2.40%**    | 1.1282     |
 
 

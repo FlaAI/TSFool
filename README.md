@@ -1,5 +1,12 @@
 # TSFool: Crafting Highly-imperceptible Adversarial Time Series through Multi-objective Black-box Attack to Fool RNN Classifiers
 
+## Quick Start
+
+```python
+adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
+```
+
+
 ## Update
 
 #### February 2023:

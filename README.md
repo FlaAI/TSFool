@@ -55,5 +55,19 @@ In this project, the Interval Weighted Finite Automaton and Recurrent Neural Net
 | PPOC   | Image     | ProximalPhalanxOutlineCorrect  | 600   | 291  | 2     | 80     |
 
 
+### The Results of adversarial attack using TSFool and five common methods on the Experimental Datasets
+
+#### Dataset: CBF, Original Model (Test) Acc: 0.7511
+| Method          | Attacked Acc | Generate Num | Time Cost (s) | Perturbation | CC     |
+|-----------------|--------------|--------------|---------------|--------------|--------|
+| FGSM            | 0.3311       | 900          | 0.004389      | 14.12%       | 1.1481 |
+| BIM             | 0.7022       | 900          | 0.029421      | 3.17%        | 0.9916 |
+| DeepFool        | 0.2911       | 900          | 3.298845      | 12.29%       | 1.0994 |
+| PGD             | 0.3311       | 900          | 0.029949      | 14.28%       | 1.1492 |
+| Transfer Attack | 0.7422       | 900          | -             | 2.60%        | 1.0105 |
+| TSFool          | 0.2111       | 720          | 0.042502      | 7.48%        | 0.7425 |
+
+
+
 <!-- ## The Experimental LSTM Classifiers -->
 

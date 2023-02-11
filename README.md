@@ -25,9 +25,6 @@ adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20
 - **details** (*bool*): if True, print the details of the attack process
 
 
-### Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks
-![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
-
 ### An Instance of TSFool and Five Common Adversarial Attacks on UCR-ECG200 Dataset
 <img decoding="async" src="figures/FGSM.png" width="33.3%"><img decoding="async" src="figures/BIM.png" width="33.3%"><img decoding="async" src="figures/DeepFool.png" width="33.3%">
 <img decoding="async" src="figures/PGD.png" width="33.3%"><img decoding="async" src="figures/TransferAttack.png" width="33.3%"><img decoding="async" src="figures/TSFool.png" width="33.3%">
@@ -226,7 +223,8 @@ To ensure the fairness of comparison, all the methods including TSFool are **onl
 | Transfer Attack | 0.8419       | 291          | -             | 13.48%       | 1.2120     |
 | TSFool          | **0.1537**   | 540          | 0.015317      | **2.40%**    | 1.1282     |
 
-
+<!-- ### Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks -->
+![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
 
 <!-- ## The Experimental LSTM Classifiers -->
 

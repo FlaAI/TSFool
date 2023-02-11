@@ -4,7 +4,7 @@
 **under construction now :)**
 
 ```python
-adv_X, adv_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
+adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
 ```
 
 - The pre-trained RNN classifiers used in our experiments are available at ``models``
@@ -68,6 +68,22 @@ Note that all the claims are proposed just for a compromise between general sign
 
 
 ## The Comparsion of TSFool and Five Common Adversarial Attacks on the Experimental Datasets
+
+The five commonly used adversarial attack methods adopted as the benchmarks in our evaluation is: **FGSM**, **BIM**, **DeepFool**, **PGD** and **transfer attack**.
+```python
+FGSM_attack = torchattacks.FGSM(model, eps=8/255)
+BIM_attack = torchattacks.BIM(model, eps=8/255, alpha=2/255, steps=10)
+DeepFool_attack = torchattacks.DeepFool(model, steps=50, overshoot=0.02)
+PGD_attack = torchattacks.PGD(model, eps=8/255, alpha=1/255, steps=10, random_start=True)
+```
+
+The implementation of FGSM, BIM, DeepFool and PGD attacks is based on **Torchattacks:** https://adversarial-attacks-pytorch.readthedocs.io/en/latest/index.html
+
+For transfer attack, the public adversarial set used (which is generated with ResNet + BIM) is from: https://germain-forestier.info/src/ijcnn2019
+
+To ensure the fairness of comparison, all the methods including TSFool are **only allowed to use their default hyper-parameters**.
+
+
 
 ### Exp. 1
 #### - Dataset: CBF

@@ -49,7 +49,7 @@ A possible explanation for the existence of the adversarial sample is that, the 
 So if there is a kind of representation model that can imitate the mechanism of a specific NN classifier to predict input data, but distinguish different inputs by their features in the original high-dimensional space just like a human, then it can be introduced to capture the otherness between the latent manifold and features of specific vulnerable samples. And such otherness can serve as a effective guide for the crafting of perturbation in adversarial attack. This idea can be especifically useful under black-box setting without gradient information available, and its advantage in the imperceptibility can be significantly revealed by the attack on some types of data that are sensitivity to perturbation in particular (as the RNN model + time series data we focus on here).
 
 
-<span id="jump"> # Detailed Experiment Records </span>
+# Detailed Experiment Records <span id="jump"> </span>
 
 ## The 10 Experimental Datasets from UCR Archive
 

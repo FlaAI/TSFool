@@ -4,15 +4,22 @@
 - The **detailed experiment records** can be found [here](#jump).
 
 # Quick Start
-### under construction now :)
+<!-- ### under construction now :) -->
 
-```python
-from main import TSFool
-adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
+```cmd
+$ git clone https://github.com/FlaAI/TSFool.git
+$ cd TSFool
+$ python
+  >>> # load your target model and dataset #
+  >>> from main import TSFool
+  >>> adv_X, target_Y, target_X = TSFool(model, X, Y)
 ```
 
 ### Brief Introduction
-Given a target time series dataset and the corresponding RNN classifier, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbation, and finally output a generated adversarial set ```adv_X```, as well as the captured original samples ```target_X``` and their labels ```target_Y```. 
+```python
+adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
+```
+Given a target time series dataset ```(X, Y)``` and the corresponding RNN classifier ```model```, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbation, and finally output a generated adversarial set ```adv_X```, as well as the captured original samples ```target_X``` and their labels ```target_Y```. 
 
 <!-- The hyper-parameters ```K, T, F``` are introduced for the establishment of a representation model used in TSFool named **intervalized weighted finite automaton (i-WFA)**. Specifically, ```K, T``` come from the original WFA model, and we recommend \cite{zhang2021decision} for more details -->
 

@@ -11,7 +11,7 @@ adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20
 ```
 
 ### Brief Introduction
-Given a target time series dataset and the corresponding RNN classifier, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbations, and finally output a generated adversarial set (```adv_X```), as well as the captured original samples (target_X) and their labels (target_Y).
+Given a target time series dataset and the corresponding RNN classifier, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbation, and finally output a generated adversarial set ```adv_X```, as well as the captured original samples ```target_X``` and their labels ```target_Y```.
 
 ### The Arguments of TSFool
 - **model** (*nn.Module*): target rnn classifier

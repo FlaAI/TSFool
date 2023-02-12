@@ -13,6 +13,13 @@
 # Quick Start
 <!-- ### under construction now :) -->
 
+### Prerequisites
+- [torch](https://pytorch.org/)
+- [numpy](https://numpy.org/)
+- [matplotlib](https://matplotlib.org/)
+
+
+### Get & Run
 ```cmd
 $ git clone https://github.com/FlaAI/TSFool.git
 $ cd TSFool
@@ -22,7 +29,7 @@ $ python
   >>> adv_X, target_Y, target_X = TSFool(model, X, Y)
 ```
 
-### Brief Introduction
+### Function
 ```python
 adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20, P=0.9, C=1, target=-1, details=False)
 ```
@@ -31,7 +38,7 @@ Given a target time series dataset ```(X, Y)``` and the corresponding RNN classi
 <!-- The hyper-parameters ```K, T, F``` are introduced for the establishment of a representation model used in TSFool named **intervalized weighted finite automaton (i-WFA)**. Specifically, ```K, T``` come from the original WFA model, and we recommend \cite{zhang2021decision} for more details -->
 
 
-### The Arguments of TSFool
+### Arguments
 - **model** (*nn.Module*): target rnn classifier
 - **X** (*numpy.array*): time series data (sample_amount, time_step, feature_dim)
 - **Y** (*numpy.array*): label (sample_amount, )

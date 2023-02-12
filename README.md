@@ -270,7 +270,8 @@ To ensure the fairness of comparison, all the methods including TSFool are **onl
 | TSFool          | **0.1537**   | 540          | 0.015317      | **2.40%**    | 1.1282     |
 
 
-### Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks
+<h4 align='center'> Comparison of Classification Accuracy before and after TSFool and the benchmark attacks </h1>
+
 ![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
 
 

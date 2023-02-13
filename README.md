@@ -35,10 +35,13 @@ adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20
 ```
 Given a target time series dataset ```(X, Y)``` and the corresponding RNN classifier ```model```, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbation, and finally output a generated adversarial set ```adv_X```, as well as the captured original samples ```target_X``` and their labels ```target_Y```. 
 
-<!-- Empirically, we provide default values of all the hyper-parameters used, while of course you can adjust them according to specific practices to achieve better performance. There is some information below that may be found useful: -->
+Empirically, we provide default values of all the hyper-parameters used, while of course you can adjust them according to specific practices to achieve better performance. There is some information below that may be found useful:
 
 The hyper-parameters ```K, T, F``` are introduced for the establishment of a representation model used in TSFool named *intervalized weighted finite automaton (i-WFA)*. Specifically, ```K, T``` come from the original WFA model, so for the adjustment of their value, we recommend the paper "[Decision-guided weighted automata extraction from recurrent neural networks](https://ojs.aaai.org/index.php/AAAI/article/view/17391)" where WFA is proposed for more details. On the other hand, ```F``` is introduced by us to determine the size of domain interval for the input abstraction in the establishment of i-WFA. The larger the value of ```F```, the finer-grained the interval, which leads to the more precise input abstraction but weaker generalization for unseen data.
 
+The hyper-parameters ```eps, N, P, C``` are used to control the crafting of adversarial samples, respectively for the perturbation amount, the number of adversarial samples generated from every single pair of vulnerable sample and target sample, the possibility of a random masking noise used, and the number of target sample matched for every specific vulnerable sample. Notice that the larger the value of ```P```, the less the randomness of masking noise, which means the higher attack success rate but the more similar adversarial samples generated from the same pair of vulnerable sample and target sample. The TSFool support both targeted and untargeted attack, and the ```target``` is provided for specifying your target label.
+
+If you are interested in the detailed attack process of TSFool, please value ```details``` to be *True* to print more run-time information.
 
 
 ### Arguments

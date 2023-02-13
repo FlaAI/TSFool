@@ -35,12 +35,14 @@ adv_X, target_Y, target_X = TSFool(model, X, Y, K=2, T=30, F=0.1, eps=0.01, N=20
 ```
 Given a target time series dataset ```(X, Y)``` and the corresponding RNN classifier ```model```, TSFool can automatically capture potential vulnerable samples to craft highly-imperceptible adversarial perturbation, and finally output a generated adversarial set ```adv_X```, as well as the captured original samples ```target_X``` and their labels ```target_Y```. 
 
-<!-- The hyper-parameters ```K, T, F``` are introduced for the establishment of a representation model used in TSFool named **intervalized weighted finite automaton (i-WFA)**. Specifically, ```K, T``` come from the original WFA model, and we recommend \cite{zhang2021decision} for more details -->
+Empirically, we provide default values of all the hyper-parameters used, while of course you can adjust them according to specific practices to achieve better performance. There is some information below that may be found useful:
+
+The hyper-parameters ```K, T, F``` are introduced for the establishment of a representation model used in TSFool named *intervalized weighted finite automaton (i-WFA)*. Specifically, ```K, T``` come from the original WFA model, so for the adjustment of their value, we recommend the paper "[Decision-guided weighted automata extraction from recurrent neural networks](https://ojs.aaai.org/index.php/AAAI/article/view/17391)" where WFA is proposed for more details. On the other hand, ```F``` is introduced by us to determine the size of domain interval for the input abstraction in i-WFA establishment. The larger the value of ```F```, the finer-grained the interval, which leads to the more precise input abstraction but weaker generalization for unseen data.
 
 
 ### Arguments
-- **model** (*nn.Module*): target rnn classifier
-- **X** (*numpy.array*): time series data (sample_amount, time_step, feature_dim)
+- **model** (*nn.Module*): the target rnn classifier
+- **X** (*numpy.array*): time series sample (sample_amount, time_step, feature_dim)
 - **Y** (*numpy.array*): label (sample_amount, )
 - **K** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of K-top prediction scores to be considered
 - **T** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of partitions of the prediction scores

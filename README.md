@@ -45,9 +45,9 @@ If you are interested in the detailed attack process of TSFool, please value ```
 
 
 ### Arguments
-- **model** (*nn.Module*): the target rnn classifier
-- **X** (*numpy.array*): time series sample (sample_amount, time_step, feature_dim)
-- **Y** (*numpy.array*): label (sample_amount, )
+- **model** (*[nn.Module](https://pytorch.org/docs/stable/nn.html#torch.nn.Module)*): the target rnn classifier
+- **X** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): time series sample (sample_amount, time_step, feature_dim)
+- **Y** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): label (sample_amount, )
 - **K** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of K-top prediction scores to be considered
 - **T** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of partitions of the prediction scores
 - **F** (*float*): (0, 1], hyper-parameter of build_WFA(), ensures that comparing with the average distance between feature points, the grading size of tokens are micro enough

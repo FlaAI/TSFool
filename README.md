@@ -131,8 +131,6 @@ On the other hand, for the **transfer attack**, a public adversarial UCR set (ge
 - Paper: [Adversarial Attacks on Deep Neural Networks for Time Series Classification](https://arxiv.org/abs/1903.07054)
 - Resource: https://germain-forestier.info/src/ijcnn2019
 
-To ensure the fairness of comparison, all the methods including TSFool are **only allowed to use their default hyper-parameters**.
-
 <span id="jump2"></span>
 
 ### Exp. 1

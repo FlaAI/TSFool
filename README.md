@@ -131,6 +131,8 @@ On the other hand, for the **transfer attack**, a public adversarial UCR set (ge
 - Paper: [Adversarial Attacks on Deep Neural Networks for Time Series Classification](https://arxiv.org/abs/1903.07054)
 - Resource: https://germain-forestier.info/src/ijcnn2019
 
+Notice that the results below are acquired under the default hyper-parameter setting of all the experimental methods. For the impact of different hyper-parameter settings, please see additional experiments [here](https://github.com/FlaAI/TSFool/blob/main/figures/Impact%20of%20Hyper-parameters.pdf). In short, the results under default setting are representative and of general significance. 
+
 <span id="jump2"></span>
 
 ### Exp. 1

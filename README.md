@@ -118,7 +118,7 @@ The **FGSM**, **BIM**, **DeepFool** and **PGD** are commonly used basic or state
 - DeepFool: [DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks](https://arxiv.org/abs/1511.04599)
 - PGD: [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083)
 
-Our implementation of these attacks is based on **Torchattacks(==3.2.6):**
+Our implementation of these attacks is based on **Torchattacks** (3.2.6):
 ```python
 FGSM_attack = torchattacks.FGSM(model, eps=8/255)
 BIM_attack = torchattacks.BIM(model, eps=8/255, alpha=2/255, steps=10)

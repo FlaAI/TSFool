@@ -93,7 +93,7 @@ We select the 10 experimental datasets following the *UCR briefing document* str
 - Test Size $\leq$ 4000, since all the attack methods are based on the test set to craft adversarial samples and we expect to compare them efficiently; and
 - class numbers $\leq$ 5 and time step length $\leq$ 150, since they represent the scale of the original problem which we also would like to reduce due to the same reason as above.
 
-Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, we will gradually test and publish the results of TSFool attack on all the rest UCR datasets in the future.
+Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, hopefully we will gradually test and publish the results of TSFool attack on all the rest UCR datasets in the future.
 
 | ID     | Type      | Name                           | Train | Test | Class | Length |
 |--------|-----------|--------------------------------|-------|------|-------|--------|
@@ -109,9 +109,11 @@ Note that all the claims are proposed just for a compromise between general sign
 | PPOC   | Image     | ProximalPhalanxOutlineCorrect  | 600   | 291  | 2     | 80     |
 
 
-## The Comparison of TSFool and Five Common Adversarial Attacks on the Experimental Datasets
+## The Comparison of TSFool and Nine Benchmark Adversarial Attacks on the Experimental Datasets
 
-There are five existing adversarial attacks adopted as benchmarks in our evaluation.
+**Important Update: We have reconstructed the implementation of the benchmarks by moving from the Torchattacks to the Adversarial Robustness Toolbox (ART).**
+
+There are nine existing adversarial attacks adopted as benchmarks in our evaluation.
 
 The **FGSM**, **BIM**, **DeepFool** and **PGD** are commonly used basic or state-of-the-art benchmarks respectively from the following papers:
 - FGSM: [Explaining and harnessing adversarial examples](https://arxiv.org/abs/1412.6572)
@@ -133,6 +135,8 @@ On the other hand, for the **transfer attack**, a public adversarial UCR set (ge
 - Paper: [Adversarial Attacks on Deep Neural Networks for Time Series Classification](https://arxiv.org/abs/1903.07054)
 - Resource: https://germain-forestier.info/src/ijcnn2019
 
+
+<!--
 Notice that the results below are acquired under the default hyper-parameter setting of all the experimental methods. For the impact of different hyper-parameter settings, please see additional experiments [here](https://github.com/FlaAI/TSFool/blob/main/figures/Impact%20of%20Hyper-parameters.pdf). In short, the results under default setting are representative and of general significance. 
 
 <span id="jump2"></span>
@@ -290,7 +294,7 @@ Notice that the results below are acquired under the default hyper-parameter set
 <h4 align='center'> Comparison of Classification Accuracy before and after TSFool and the benchmark attacks </h1>
 
 ![Comparison of Classification Accuracy before and after TSFool and Five Common Adversarial Attacks](figures/Accuracy.png)
-
+ -->
 
 <!-- ## The Experimental LSTM Classifiers -->
 

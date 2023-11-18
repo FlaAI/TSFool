@@ -111,7 +111,7 @@ Note that all the claims are proposed just for a compromise between general sign
 
 ## The Nine Benchmark Adversarial Attacks
 
-**Important Update: We have reconstructed the implementation of the benchmarks by moving from the Torchattacks ([Paper](https://arxiv.org/abs/2010.01950), [Resource](https://github.com/Harry24k/adversarial-attacks-pytorch)) to the Adversarial Robustness Toolbox (ART) ([Paper](https://arxiv.org/abs/1807.01069), [Resource](https://github.com/Trusted-AI/adversarial-robustness-toolbox)) because the latter seems more popular and powerful to support sufficient comparison in this task. Our great thanks to the developers of both of the two public packages!**
+**Important Update: We have reconstructed the implementation of the benchmarks by moving from the Torchattacks ([Paper](https://arxiv.org/abs/2010.01950), [Resource](https://github.com/Harry24k/adversarial-attacks-pytorch)) to the Adversarial Robustness Toolbox (ART) ([Paper](https://arxiv.org/abs/1807.01069), [Resource](https://github.com/Trusted-AI/adversarial-robustness-toolbox)) because the latter seems more popular and powerful to support sufficient comparison in this task. Our great thanks to the contributors of both of the two public packages!**
 
 There are totally nine existing adversarial attacks adopted as benchmarks in our evaluation.
 

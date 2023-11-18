@@ -7,7 +7,7 @@
 - The **detailed experiment records** can be found [here](#jump).
 - The additional experimental results for **the impact of different hyper-parameter settings** can be found [here](https://github.com/FlaAI/TSFool/blob/main/figures/Impact%20of%20Hyper-parameters.pdf). 
 
-<h4 align='center'> A Comparison Between [TSFOOL] and [FIVE COMMON ADVERSARIAL ATTACKS] on UCR-ECG200 Dataset </h4>
+<h4 align='center'> [TSFool] VS [Six White-box & Three Black-box Adversarial Attacks] </h4>
 
 <img decoding="async" src="figures/FGSM.png" width="20%"><img decoding="async" src="figures/JSMA.png" width="20%"><img decoding="async" src="figures/DeepFool.png" width="20%"><img decoding="async" src="figures/PGD.png" width="20%"><img decoding="async" src="figures/CW.png" width="20%">
 <img decoding="async" src="figures/Auto-Attack.png" width="20%"><img decoding="async" src="figures/Boundary Attack.png" width="20%"><img decoding="async" src="figures/HopSkipJump.png" width="20%"><img decoding="async" src="figures/Transfer Attack.png" width="20%"><img decoding="async" src="figures/TSFool.png" width="20%">

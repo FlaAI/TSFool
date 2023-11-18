@@ -47,18 +47,18 @@ If you are interested in the detailed attack process of TSFool, please value ```
 
 
 ### Arguments
-- **model** (*[nn.Module](https://pytorch.org/docs/stable/generated/torch.nn.Module)*): the target rnn classifier
-- **X** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): time series sample (sample_amount, time_step, feature_dim)
-- **Y** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): label (sample_amount, )
-- **K** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of K-top prediction scores to be considered
-- **T** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of partitions of the prediction scores
-- **F** (*float*): (0, 1], hyper-parameter of build_WFA(), ensures that comparing with the average distance between feature points, the grading size of tokens are micro enough
-- **eps** (*float*): (0, 0.1], hyper-parameter for perturbation, denotes the perturbation amount under the limitation of 'micro' (value 0.1 corresponds to the largest legal perturbation amount)
-- **N** (*int*): >=1, hyper-parameter for perturbation, denotes the number of adversarial samples generated from a specific minimum positive sample
-- **P** (*float*): (0, 1], hyper-parameter for perturbation, denotes the possibility of the random mask
-- **C** (*int*): >=1, hyper-parameter for perturbation, denotes the number of minimum positive samples to be considered for each of the sensitive negative samples
-- **target** (*int*): [-1, max label], hyper-parameter for perturbation, -1 denotes untargeted attack, other values denote targeted attack with the corresponding label as the target
-- **details** (*bool*): if True, print the details of the attack process
+- **model** (*[nn.Module](https://pytorch.org/docs/stable/generated/torch.nn.Module)*): the target rnn classifier.
+- **X** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): time series sample (sample_amount, time_step, feature_dim).
+- **Y** (*[numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array)*): label (sample_amount, ).
+- **K** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of K-top prediction scores to be considered.
+- **T** (*int*): >=1, hyper-parameter of build_WFA(), denotes the number of partitions of the prediction scores.
+- **F** (*float*): (0, 1], hyper-parameter of build_WFA(), ensures that compared with the average distance between feature points, the grading size of tokens is micro enough.
+- **eps** (*float*): (0, 0.1], hyper-parameter for perturbation, denotes the perturbation amount under the limitation of 'micro' (value 0.1 corresponds to the largest legal perturbation amount).
+- **N** (*int*): >=1, hyper-parameter for perturbation, denotes the number of adversarial samples generated from a specific minimum positive sample.
+- **P** (*float*): (0, 1], hyper-parameter for perturbation, denotes the possibility of the random mask.
+- **C** (*int*): >=1, hyper-parameter for perturbation, denotes the number of minimum positive samples to be considered for each of the sensitive negative samples.
+- **target** (*int*): [-1, max label], hyper-parameter for perturbation, -1 denotes untargeted attack, other values denote targeted attack with the corresponding label as the target.
+- **details** (*bool*): if True, print the details of the attack process.
 
 
 <!-- ## Update
@@ -93,7 +93,7 @@ We select the 10 experimental datasets following the *UCR briefing document* str
 - Test Size $\leq$ 4000, since all the attack methods are based on the test set to craft adversarial samples and we expect to compare them efficiently; and
 - class numbers $\leq$ 5 and time step length $\leq$ 150, since they represent the scale of the original problem which we also would like to reduce due to the same reason as above.
 
-Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, hopefully we will gradually test and publish the results of TSFool attack on all the rest UCR datasets in the future.
+Note that all the claims are proposed just for a compromise between general significance and experimental efficiency of our evaluation (since hopefully this would be suitable for reporting in a technology paper), instead of an inherent limitation of TSFool. Just as the "best practice" suggested by the *UCR briefing document*, hopefully we will gradually test and publish the results of TSFool attack on all the rest of the UCR datasets in the future.
 
 | ID     | Type      | Name                           | Train | Test | Class | Length |
 |--------|-----------|--------------------------------|-------|------|-------|--------|
@@ -116,26 +116,26 @@ Note that all the claims are proposed just for a compromise between general sign
 There are totally nine existing adversarial attacks adopted as benchmarks in our evaluation.
 
 The **FGSM**, **JSMA**, **DeepFool**, **PGD** (sometimes referred to as **BIM** in deep learning), **C&W**, **Auto-Attack**, **Boundary Attack** and **HopSkipJump** are popular adversarial attack methods from basic to state-of-the-art ones, respectively from the following papers:
-- FGSM: [Explaining and harnessing adversarial examples](https://arxiv.org/abs/1412.6572)
-- JSMA: [The Limitations of Deep Learning in Adversarial Settings](https://arxiv.org/abs/1511.07528)
-- DeepFool: [DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks](https://arxiv.org/abs/1511.04599)
-- PGD: [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083)
-- BIM: [Adversarial Examples in the Physical World](https://arxiv.org/abs/1607.02533)
-- C&W: [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/abs/1608.04644)
-- Auto-Attack: [Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks](https://arxiv.org/abs/2003.01690)
-- Boundary Attack: [Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models](https://arxiv.org/abs/1712.04248)
-- HopSkipJump: [HopSkipJumpAttack: A Query-Efficient Decision-Based Attack](https://arxiv.org/abs/1904.02144)
+- FGSM: [Explaining and harnessing adversarial examples](https://arxiv.org/abs/1412.6572).
+- JSMA: [The Limitations of Deep Learning in Adversarial Settings](https://arxiv.org/abs/1511.07528).
+- DeepFool: [DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks](https://arxiv.org/abs/1511.04599).
+- PGD: [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083).
+- BIM: [Adversarial Examples in the Physical World](https://arxiv.org/abs/1607.02533).
+- C&W: [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/abs/1608.04644).
+- Auto-Attack: [Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks](https://arxiv.org/abs/2003.01690).
+- Boundary Attack: [Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models](https://arxiv.org/abs/1712.04248).
+- HopSkipJump: [HopSkipJumpAttack: A Query-Efficient Decision-Based Attack](https://arxiv.org/abs/1904.02144).
 
-Our specific implementation of these attacks are as fellows:
+Our specific implementation of these attacks is as follows:
 ```python
 # Initialize PyTorchClassifier for ART
 classifier = PyTorchClassifier(
     model=model,
     loss=nn.CrossEntropyLoss(),
-    optimizer=torch.optim.Adam(model.parameters(), lr=0.001),
+    optimizer=torch.optim.Adam(model.parameters(), lr=LR),
     input_shape=(X.shape[1], X.shape[2]),
-    nb_classes=class_num,
-    clip_values=(np.min(min_x), np.max(max_x)),
+    nb_classes=CLASS_NUM,
+    clip_values=(min_X_feature, max_X_feature),
     channels_first=False
 )
 
@@ -152,8 +152,8 @@ hsj = HopSkipJump(classifier, targeted=False)
 ```
 
 On the other hand, for the **Transfer Attack**, a public adversarial UCR set (generated by ResNet + BIM) is used: 
-- Paper: [Adversarial Attacks on Deep Neural Networks for Time Series Classification](https://arxiv.org/abs/1903.07054)
-- Resource: https://germain-forestier.info/src/ijcnn2019
+- Paper: [Adversarial Attacks on Deep Neural Networks for Time Series Classification](https://arxiv.org/abs/1903.07054).
+- Resource: https://germain-forestier.info/src/ijcnn2019.
 
 
 <!--

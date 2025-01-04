@@ -17,12 +17,6 @@ TSFool is a multi-objective gray-box attack method to craft highly-imperceptible
 # Quick Start
 <!-- ### under construction now :) -->
 
-### Prerequisites
-- [torch](https://pytorch.org/)
-- [numpy](https://numpy.org/)
-- [matplotlib](https://matplotlib.org/)
-
-
 ### Get & Run
 ```cmd
 $ git clone https://github.com/FlaAI/TSFool.git

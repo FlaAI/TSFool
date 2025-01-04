@@ -1,6 +1,6 @@
 # TSFool
 
-**The paper has been accepted for publication at the 27th European Conference on Artificial Intelligence (ECAI'24). The full version (preprint) is available [here](https://arxiv.org/abs/2209.06388).**
+**The paper has been accepted for publication at the 27th European Conference on Artificial Intelligence (ECAI'24). The conference proceedings version is available [here](https://ebooks.iospress.nl/doi/10.3233/FAIA240644), and the full version (arXiv preprint) is available [here](https://arxiv.org/abs/2209.06388).**
 
 TSFool is a multi-objective gray-box attack method to craft highly-imperceptible adversarial samples for RNN-based time series classification. The TSFool method in this repository is built for univariate time series data, and an extended version called Multi-TSFool for multivariate time series data can be found [here](https://github.com/FlaAI/Multi-TSFool).
 
